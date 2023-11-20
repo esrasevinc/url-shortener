@@ -37,7 +37,7 @@ const LinkTable = () => {
             <div className="group">
             <a>
             <span title='Sil' className='hidden group-hover:block text-stone-800'>Sil</span>
-            <DeleteOutlined className='font-bold text-xl text-red-500'/>
+            <DeleteOutlined className='font-bold text-xl text-blue-500'/>
             </a>
             </div>
             <a>
