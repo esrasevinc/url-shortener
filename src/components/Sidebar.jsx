@@ -11,6 +11,7 @@ import {
 } from '@ant-design/icons';
 
 import { Layout, Menu, Button, theme } from 'antd';
+import LinkTable from './LinkTable';
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -70,7 +71,7 @@ const Sidebar = () => {
           />
         </Header>
         <Content className='my-6 mx-6 p-6 h-screen bg-slate-50'>
-          Content
+          <LinkTable />
         </Content>
         </div>
 

@@ -32,12 +32,12 @@ const UrlShortener = ({ setInputValue, setShortInputValue }) => {
           <div className="flex flex-col items-center p-2">
             <input 
             type="text" 
-            className='w-[70%] h-14 rounded-full m-2 px-6 py-4 border-slate-600 border-2' 
+            className='w-[80%] h-14 rounded-full m-2 px-6 py-4 border-slate-600 border-2' 
             placeholder='Lütfen kısaltmak istediğiniz linki giriniz.'
             onChange={handleLongUrl}
             value={inputUrl}
             />
-            <div className="flex flex-row justify-between w-[70%]">
+            <div className="flex flex-row justify-between w-[80%]">
                 <input 
                 type="text" 
                 className='w-4/5 h-14 rounded-full mt-4 px-6 py-4 border-slate-600 border-2' 
