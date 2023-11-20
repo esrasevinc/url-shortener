@@ -1,5 +1,6 @@
-import React from 'react'
-import { Space, Table } from 'antd';
+import React, { useMemo, useState } from 'react';
+
+import { Space, Table, Tooltip} from 'antd';
 import { DeleteOutlined, FolderOpenOutlined } from '@ant-design/icons';
 
 const LinkTable = () => {
@@ -34,14 +35,16 @@ const LinkTable = () => {
           dataIndex: '',
           key: 'x',
           render: () => (<Space size='large'>
-            <div className="group">
             <a>
-            <span title='Sil' className='hidden group-hover:block text-stone-800'>Sil</span>
-            <DeleteOutlined className='font-bold text-xl text-blue-500'/>
+              <Tooltip placement="top" title='Sil'>
+                <DeleteOutlined className='font-bold text-xl text-red-500'/>
+              </Tooltip>
             </a>
-            </div>
+            
             <a>
+              <Tooltip placement="top" title='Arşivle'>
                 <FolderOpenOutlined className='font-bold text-xl text-green-600'/>
+              </Tooltip>
             </a>
           </Space>)
           },
@@ -52,15 +55,22 @@ const LinkTable = () => {
           key: '1',
           shortUrl: 'https://ant.design/components/table',
           longUrl: 'https://ant.design/components/table',
-          date: '17/11/2023',
+          date: 'Mar 12 2023 10:00:00 AM',
           clickCount: 25,
         },
         {
           key: '2',
           shortUrl: 'https://yuvam-olur-musun.vercel.app',
           longUrl: 'https://yuvam-olur-musun.vercel.app/cinsler/kedi',
-          date: '10/11/2023',
+          date: 'Apr 12 2023 10:00:00 AM',
           clickCount: 10,
+        },
+        {
+          key: '3',
+          shortUrl: 'https://yuvam-olur-musun.vercel.app',
+          longUrl: 'https://yuvam-olur-musun.vercel.app/cinsler/kedi',
+          date: 'Jan 15 2023 10:00:00 AM',
+          clickCount: 15,
         },
       ];
 

@@ -23,7 +23,7 @@ const UrlShortener = ({ setInputValue, setShortInputValue }) => {
   return (
     <div>
       <div className='justify-center text-center'>
-          <h1 className='text-5xl text-center text-slate-800 font-bold font-sans pt-36 mb-8'>Url 
+          <h1 className='text-5xl text-center text-slate-800 font-bold font-sans pt-16 mb-8'>Url 
             <span className=" text-sky-700">  Kısaltıcı</span>
           </h1>
           <p className="text-l text-stone-600 font-sans m-2">Uzun ve anlaşılması zor bağlantıları kısaltarak
@@ -32,12 +32,12 @@ const UrlShortener = ({ setInputValue, setShortInputValue }) => {
           <div className="flex flex-col items-center p-2">
             <input 
             type="text" 
-            className='w-[50%] h-14 rounded-full m-2 px-6 py-4 border-slate-600 border-2' 
+            className='w-[70%] h-14 rounded-full m-2 px-6 py-4 border-slate-600 border-2' 
             placeholder='Lütfen kısaltmak istediğiniz linki giriniz.'
             onChange={handleLongUrl}
             value={inputUrl}
             />
-            <div className="flex flex-row gap-20 w-[50%]">
+            <div className="flex flex-row justify-between w-[70%]">
                 <input 
                 type="text" 
                 className='w-4/5 h-14 rounded-full mt-4 px-6 py-4 border-slate-600 border-2' 

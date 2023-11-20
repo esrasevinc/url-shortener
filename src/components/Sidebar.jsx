@@ -11,7 +11,6 @@ import {
 } from '@ant-design/icons';
 
 import { Layout, Menu, Button, theme } from 'antd';
-import LinkTable from './LinkTable';
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -24,9 +23,9 @@ const Sidebar = () => {
 
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed} className={!collapsed ? "w-[40%]" : ''}>
+      <Sider trigger={null} collapsible collapsed={collapsed} >
 
-        <div className="flex flex-row  text-slate-50 text-2xl p-7">
+        <div className="flex flex-row text-slate-50 text-2xl p-7">
             <PaperClipOutlined />
         </div>
     
@@ -56,9 +55,9 @@ const Sidebar = () => {
         </div>
       </Sider>
 
-      <Layout className='h-full w-[60%] bg-slate-100'>
+      <Layout className='h-full bg-white'>
         <div>
-        <Header className='p-0 bg-white'>
+        <Header className='p-0 bg-slate-100'>
           <Button
             type="text"
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -71,12 +70,14 @@ const Sidebar = () => {
           />
         </Header>
         <Content className='my-6 mx-6 p-6 h-screen bg-slate-50'>
-          <LinkTable />
+          Content
         </Content>
         </div>
 
-        <Footer className='text-center'>
+        <Footer className='text-center bg-slate-100'>
+          <p className="font-sans text-gray-500">
           Beylikdüzü Belediyesi ©2023
+          </p>
         </Footer>
 
       </Layout>
