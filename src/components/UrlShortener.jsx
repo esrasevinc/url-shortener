@@ -23,9 +23,9 @@ const UrlShortener = ({ setInputValue, setShortInputValue }) => {
   return (
     <div>
       <div className='justify-center text-center'>
-          <h1 className='text-5xl text-center text-slate-800 font-bold font-sans pt-16 mb-8'>Url 
+      <h1 className='text-5xl text-center text-slate-800 font-bold font-sans pt-24 mb-12'>Url 
             <span className=" text-sky-700">  Kısaltıcı</span>
-          </h1>
+      </h1>
           <p className="text-l text-stone-600 font-sans m-2">Uzun ve anlaşılması zor bağlantıları kısaltarak
           <br /> 
           kendi iş hedeflerinize göre kişiselleştirin ve tıklanma performansını ölçün.</p>

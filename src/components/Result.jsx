@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Result = () => {
 
-    const [ shortenedUrl, setShortenedUrl ] = useState("Hello")
+    const [ shortenedUrl, setShortenedUrl ] = useState(false)
     const [ copied, setCopied ] = useState(false)
 
     const handleCopyToast = () => {
@@ -16,6 +16,7 @@ const Result = () => {
 
   return (
     <>
+    {shortenedUrl && 
         <div className='flex flex-col items-center justify-center'>
             <p className="text-2xl text-stone-600 font-sans font-semibold mt-24 mb-2">Kısaltılmış Link: </p>
             <p className="text-xl text-stone-800 font-sans mb-4" >{shortenedUrl}</p>
@@ -36,6 +37,7 @@ const Result = () => {
 
             </CopyToClipboard>
         </div>
+        }
     </>
   )
 }

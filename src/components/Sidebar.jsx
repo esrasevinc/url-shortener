@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 
 import {
-    PaperClipOutlined,
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-    TableOutlined,
-    UserOutlined,
-    LinkOutlined,
-    HomeOutlined
+  PaperClipOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  TableOutlined,
+  UserOutlined,
+  LinkOutlined,
+  HomeOutlined
 } from '@ant-design/icons';
 
 import { Layout, Menu, Button, theme } from 'antd';
-import LinkTable from './LinkTable';
+const { Header, Sider } = Layout;
 
-const { Header, Sider, Content, Footer } = Layout;
-
-const Sidebar = () => {
+const Sidebar = ({ Children }) => {
 
   const [collapsed, setCollapsed] = useState(false);
   const {
@@ -24,7 +22,7 @@ const Sidebar = () => {
 
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed} >
+      <Sider trigger={null} collapsible collapsed={collapsed} className='h-screen'>
 
         <div className="flex flex-row text-slate-50 text-2xl p-7">
             <PaperClipOutlined />
@@ -49,14 +47,14 @@ const Sidebar = () => {
             {
               key: '3',
               icon: <TableOutlined />,
-              label: 'Linkler',
+              label: 'Linkler Tablosu',
             },
           ]}
         />
         </div>
       </Sider>
 
-      <Layout className='h-full bg-white'>
+      <Layout className='h-screen bg-white'>
         <div>
         <Header className='p-0 bg-slate-100'>
           <Button
@@ -70,17 +68,8 @@ const Sidebar = () => {
             }}
           />
         </Header>
-        <Content className='my-6 mx-6 p-6 h-screen bg-slate-50'>
-          <LinkTable />
-        </Content>
+        
         </div>
-
-        <Footer className='text-center bg-slate-100'>
-          <p className="font-sans text-gray-500">
-          Beylikdüzü Belediyesi ©2023
-          </p>
-        </Footer>
-
       </Layout>
     </Layout>
   );

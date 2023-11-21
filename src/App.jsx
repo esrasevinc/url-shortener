@@ -1,21 +1,26 @@
 import { useState } from 'react'
-import UrlShortener from './components/UrlShortener.jsx'
-import Result from './components/Result.jsx'
-import LinkTable from './components/LinkTable.jsx'
-import Sidebar from './components/Sidebar.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PageLayout from './pages/PageLayout.jsx'
+import Home from './pages/Home.jsx'
+import NoPage from './pages/NoPage.jsx'
+import Links from './pages/Links.jsx'
+import UrlShortenerPage from './pages/UrlShortenerPage.jsx';
 
 function App() {
 
-  const [ inputValue, setInputValue ] = useState('')
-  const [ shortInputValue, setShortInputValue ] = useState('')
-
   return (
-    <div className="bg-slate-50 w-full h-screen">
-      <Sidebar />
-      {/* <UrlShortener setInputValue={setInputValue} setShortInputValue={setShortInputValue}/>
-      <Result /> */}
-      {/* <LinkTable /> */}
-    </div>
+    <>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PageLayout />} errorElement={<NoPage />}>
+          <Route path="/Home" index element={<Home />} />
+          <Route path="/Links" element={<Links />} />
+          <Route path="/UrlShortenerPage" element={<UrlShortenerPage />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
