@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 
-import UrlShortener from '../components/UrlShortener.jsx'
-import Result from '../components/Result.jsx'
-
 const Home = () => {
 
   return (

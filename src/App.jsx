@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageLayout from './pages/PageLayout.jsx'
 import Home from './pages/Home.jsx'
@@ -12,7 +11,7 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PageLayout />} errorElement={<NoPage />}>
+        <Route path="/" element={<PageLayout />} errorElement={<NoPage />} >
           <Route path="/Home" index element={<Home />} />
           <Route path="/Links" element={<Links />} />
           <Route path="/UrlShortenerPage" element={<UrlShortenerPage />} />

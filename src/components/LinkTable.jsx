@@ -80,12 +80,12 @@ const LinkTable = () => {
 
   return (
     <div className='flex flex-col items-center justify-center pt-24'>
-        <h1 className='text-5xl text-center text-slate-800 font-bold font-sans mb-14'>Linkler 
-            <span className=" text-sky-700">  Tablosu</span>
+      <h1 className='text-5xl text-center text-slate-800 font-bold font-sans mb-14'>Linkler 
+        <span className=" text-sky-700">  Tablosu</span>
       </h1>
-        <div className="w-[80%]">
+      <div className="w-[80%] items-center">
         <Table columns={columns} dataSource={dataSource} />
-        </div>
+      </div>
     </div>
   )
 }
