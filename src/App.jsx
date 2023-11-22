@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PageLayout />} errorElement={<NoPage />} >
           <Route path="/Home" index element={<Home />} />
-          <Route path="/Links" element={<Links />} />
+          <Route path="/ActiveLinks" element={<Links />} />
           <Route path="/UrlShortenerPage" element={<UrlShortenerPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>

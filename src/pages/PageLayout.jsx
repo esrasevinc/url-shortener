@@ -13,7 +13,7 @@ const PageLayout = () => {
       </main>
       </div>
       <footer>
-        <p className='text-base text-center text-stone-600 bg-slate-100 font-sans py-4'>Beylikdüzü Belediyesi</p>
+        <p className='text-base text-center text-stone-700 bg-slate-100 font-sans py-4'>Beylikdüzü Belediyesi</p>
       </footer>
     </div>
   )
